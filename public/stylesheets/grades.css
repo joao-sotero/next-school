@@ -1,0 +1,212 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section.grades {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 3rem;
+}
+
+@media (max-width: 480px) {
+    main section.grades {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* row-gap: 3rem; */
+    }
+
+    main section.grades .gray-bar {
+        border-radius: 50px;
+    }
+
+    main section.grades .green-bar {
+        background-color: var(--main-color);
+        height: 100%;
+        border-radius: 50px;
+    }
+}
+main > h2 {
+    /* margin-top: 5rem; */
+    color: var(--main-color);
+}
+
+main > h1,
+main > h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+main section.grades .box > h2 {
+    margin-bottom: 0.5rem;
+}
+
+.box {
+    position: relative;
+    /* width: 300px;
+    height: 400px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box .grade {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .grade svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-450deg);
+}
+
+.box .grade svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #53DC98;
+    stroke: var(--main-color);
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+}
+
+.box .grade svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #EFF0F6;
+}
+
+.box .grade svg circle:nth-child(2) {
+    /* stroke-dashoffset: calc(440 - (440 * 8) / 10); */
+    /* stroke: #53DC98; */
+    stroke: var(--main-color);
+}
+
+.box .grade .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*=== NOTAS PROF ===*/
+
+main section .grades-bar .gray-bar {
+    width: 32.6rem; /* 326px de 10*/
+    height: 1.2rem; /* 12px de 10 */
+    background-color: #EFF0F6;
+}
+
+main form.grades-prof {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form.grades-prof .fields{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 18rem 18rem; /* 288px 288px de 16 */
+    column-gap: 10rem; /* 160px de 16 */
+    row-gap: 6rem; /* 96px de 16 */
+}
+
+main form.grades-prof fieldset {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main form.grades-prof fieldset label {
+    font-weight: 500;
+    font-size: 1rem; /* 16px de 16*/
+    color: #6E7191;
+}
+
+main form.grades-prof fieldset input {
+    border: 0.125rem solid #D9DBE9; /* 2px de 16 */
+    border-radius: 16px;
+    width: 3.5rem; /* 56px de 16 */
+    height: 2rem; /* 32px de 16 */
+    padding-left: 1rem; /* 16px de 16 */
+    padding-right: 1rem; /* 16px de 16 */
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+main form.grades-prof button {
+    margin-top: 5rem;
+    border-radius: 50px;
+    background-color: #00BA88;
+}
+
+main {
+    position: relative;
+}
+
+main #home-button {
+    position: absolute;
+    right: 14.5rem;
+    top: -1rem;
+    height: 3.5rem;
+    width: 4.735rem;
+    border: 0.125rem solid var(--main-color); /* 2px de 16 */
+    background-color: #FFF;
+    border-radius: 16px;
+    margin-left: 1.5rem; /*  16px */
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media (max-width: 1280px){
+    main #home-button {
+        right: 12rem;
+        top: -1rem;
+        height: 3.5rem;
+        width: 4.735rem;
+        border: 0.125rem solid var(--main-color); /* 2px de 16 */
+    }
+}
+
+@media (max-width: 768px){
+    body main.container{
+        max-width: 768px;
+    }
+
+    main #home-button {
+        right: 2rem;
+        top: -1rem;
+        height: 3.5rem;
+        width: 4.735rem;
+        border: 0.125rem solid var(--main-color); /* 2px de 16 */
+    }
+}
+
+@media (max-width: 480px) { 
+    main form.grades-prof .fields {
+        column-gap: 5rem;
+    }
+
+    main #home-button {
+        right: -4rem;
+        top: -1rem;
+        height: 3.5rem;
+        width: 4.735rem;
+        border: 0.125rem solid var(--main-color); /* 2px de 16 */
+    }
+}

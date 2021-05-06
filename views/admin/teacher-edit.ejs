@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT school | Login</title>
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <link rel="stylesheet" href="/stylesheets/admin-register.css">
+</head>
+<body>
+  <main>
+    <section class="container flex-center">
+      <div class="login">
+          <div class="header-login">
+            <h1>Editar professor</h1>
+            <a href="/admin/professores" class="button">
+              <img src="/images/icons/Home.svg" alt="Home icon">
+            </a>
+          </div>
+          <form action="/admin/professores/<%= professor.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="field">
+                <div class="icon">
+                    <img src="/images/icons/profile.svg" alt="Icone de perfil">
+                </div>
+                <fieldset class="input">
+                  <label for="">Nome completo</label>
+                  <input type="text" name="nome" value="<%= professor.nome %>" placeholder="Digite seu código">
+                </fieldset>
+            </div>
+            <div class="field">
+                <div class="icon" id="toggle" onclick="showHide()">
+                    <img src="/images/icons/profile.svg" alt="Icone de perfil">
+                </div>
+                <fieldset class="input">
+                    <label for="">CPF</label>
+                    <input type="text" name="cpf" value="<%= professor.cpf %>" placeholder="Digite seu CPF">
+                </fieldset>
+            </div>
+            <select name="modulo_id" id="appearance-select">
+                <option value="" disabled>Selecione um módulo</option>
+                <% for ( let modulo of modulos ) { %>
+                  <option value="<%= modulo.id %>" <%= professor.modulo_id == modulo.id ? 'selected' : '' %>  ><%= modulo.nome %></option>
+                <% } %>
+            </select>
+            <div class="field password">
+                <div class="icon" id="toggle" onclick="showHide()">
+                    <img id="show-hide" class="toggle" src="/images/icons/show-password.svg" alt="Icone de perfil">
+                </div>
+                <fieldset class="input">
+                    <label for="">Senha</label>
+                    <input type="password" id="password" name="senha_professor"  placeholder="Digite sua senha">
+                </fieldset>
+            </div>
+            <div class="input-file">
+              <div id="photos-upload">
+                <input 
+                  id="photo-input" 
+                  type="file" 
+                  name="img_perfil" 
+                  accept="image/*" 
+                  value="<%= professor.img_perfil %>"
+                  onchange="addPhoto(event)"  
+                >
+                <p>Enviar avatar</p>
+              </div>
+            </div>
+            <button class="button" type="submit">Editar</button>
+          </form>
+          <form action="/admin/professores/<%= professor.id %>?_method=DELETE" method="POST">
+            <button class="button" type="submit" style="background-color: red;">Deletar</button>
+            <input type="hidden" name="id" value="<%= professor.id %>">
+          </form>
+      </div> 
+    </section>
+  </main> 
+  <script>
+    const password = document.getElementById('password')
+    const toggle = document.getElementById('toggle')
+    const img = document.querySelector('#show-hide')
+
+    function showHide() {
+        if (password.type === 'password') {
+          password.setAttribute('type', 'text')
+          toggle.classList.add('hide')
+          img.src = '/images/icons/hide-password.svg'
+        } else {
+          password.setAttribute('type', 'password')
+          toggle.classList.remove('hide')
+          img.src = '/images/icons/show-password.svg'
+        }
+    }
+
+    const input = document.querySelector('#photo-input')
+    const p = document.querySelector('.input-file p')
+    function addPhoto(event) {
+      p.innerText = "Avatar enviado"
+    }
+</script>
+</body>
+</html>

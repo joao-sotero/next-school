@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT school | Notas</title>
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <link rel="stylesheet" href="/stylesheets/grades.css">
+</head>
+<body>
+  <main>
+    <!-- <a href="/admin/selecionar" id="home-button" class="button">
+      <img src="/images/icons/Home.svg" alt="Home icon">
+    </a> -->
+    <h2><%= notasAluno[0].nome_aluno %> </h2>
+    <h1><%= notasAluno[0].modulo_id %> </h1>
+    <form action="/professor/notas/<%= notasAluno[0].aluno_id%>?_method=PUT" method="POST" class="grades-prof container">
+        <div class="fields">
+            <% for( let nota of notasAluno) { %>
+                <fieldset>
+                  <label for="" style="text-transform: uppercase;"><%= nota.nome %> </label>
+                    <input 
+                      type="number" 
+                      name="<%= nota.disciplina_id %>" 
+                      value="<%= nota.nota %>" 
+                      id="disciplina_id"
+                      min="0"
+                      max="10"
+                      step="0.5"
+                    >
+                </fieldset>
+            <% } %>
+        </div>
+        <button class="button flex-center" type="submit">Enviar</button>
+    </form>  
+  </main> 
+</body>
+</html>

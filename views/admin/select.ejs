@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT school</title>
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <link rel="stylesheet" href="/stylesheets/home-login.css">
+
+</head>
+<body>
+  <main>
+    <form action="/logout">
+      <button type="submit" id="logout-icon"><img src="/images/logout.svg" alt="Logout image"></button>
+    </form>
+    <section class="container">
+      <figure>
+        <img src="/images/add-user.svg" alt="Imagem da logo">
+      </figure>
+      <div class="login"> 
+        <h1 style="font-size: 2rem; margin-bottom: 3rem;">Adicionar</h1>
+        <div class="buttons">
+          <a class="button" href="/admin/criar/aluno">Aluno</a>
+          <a class="button" href="/admin/criar/professor">Professor</a>
+        </div>
+        <div class="choose-listing">
+          <p>Visualizar</p>
+          <a href="/admin/alunos" class="button">Alunos</a>
+          <a href="/admin/professores" class="button">Professores</a>
+        </div>
+      </div> 
+    </section>
+  </main> 
+</body>
+</html>

@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2rem; /* 32px */
+}
+
+main section form {
+    margin-top: 4rem; /*  64px de 16 */
+    display: flex;
+    align-items: center;
+}
+
+main section form input{
+    height: 3.5rem; /* 56px */
+    width: 16rem; /* 256px */
+    border: none;
+    padding-left: 2rem; /* 32px */
+    font-size: 1rem;
+    background-color: #EFF0F6;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+main section form input::placeholder {
+    
+    color: #A0A3BD;
+    font-size: 1rem; /* 16px */
+}
+
+main section form button,
+main section form a.button {
+    height: 3.5rem;
+    width: 4.735rem;
+    border: 0.125rem solid var(--main-color); /* 2px de 16 */
+    background-color: #FFF;
+    border-radius: 16px;
+    margin-left: 1.5rem; /*  16px */
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+main section form button::after {
+    content: "";
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+}
+
+main section form button:hover {
+    transform: scale(1.125, 1.125);
+}
+
+main section form button:hover::after {
+    opacity: 1;
+}
+
+main section .listing {
+    margin-top: 3.5rem; /* 56px de 16 */
+    display: grid;
+    grid-template-columns: 18rem 18rem; /* 240px 240px de 16*/
+    column-gap: 5.25rem; /* 84px de 16*/
+    row-gap: 2rem; /* 32px de 16 */
+}
+
+main section .listing .student {
+    display: grid;
+    grid-template-columns: 1fr 1.5rem; /* 24px de 16 */
+    align-items: center;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+main section .listing .student .info {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+main section .listing .student .info span:nth-child(1) {
+    font-weight: 700;
+}
+
+main section .listing .student .info span:nth-child(3) {
+    font-size: 0.75rem; /* 10px */
+    color: #A59F9F;
+}
+
+@media (max-width: 480px) { 
+    main section form button img,
+    main section form a.button img {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    main section .listing .student img {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}

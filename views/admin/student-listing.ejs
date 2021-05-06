@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT school | Listagem</title>
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <link rel="stylesheet" href="/stylesheets/listing.css">
+</head>
+<body>
+  <main>
+    <section class="container flex-center">
+        <h1>Listagem</h1>
+        <form action="/admin/alunos" method="GET">
+            <input type="text" name="filter" placeholder="Buscar">
+            <button type="submit"><img src="/images/icons/search.svg" alt="Ícone de pesquisa"></button>
+            <a href="/admin/selecionar" class="button">
+                <img src="/images/icons/Home.svg" alt="Home icon">
+            </a>
+        </form>
+        <div class="listing">
+            <% for( let aluno of alunos ) { %>
+                <a href="/admin/alunos/<%= aluno.id%>">
+                    <div class="student scale">
+                        <div class="info">
+                            <span><%= aluno.nome_aluno %> </span>
+                            <span><%= aluno.cpf %> </span>
+                            <span><%= aluno.modulo_id %></span>
+                        </div>
+                        <img src="/images/icons/edit.svg" alt="Ícone de edição">
+                    </div>
+                </a>
+            <% } %>
+        </div>
+    </section>
+  </main> 
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT school | Notas</title>
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <link rel="stylesheet" href="/stylesheets/grades.css">
+</head>
+<body>
+  <main class="container">
+    <h2>NOTAS</h2>
+    <h1><%= notasAluno[0].modulo_id %> </h1>
+    <section class="grades">
+        <% for( let nota of notasAluno ) { %>
+            <div class="box">
+                <h2 class="text" style="text-transform: uppercase;"><%= nota.nome %> </h2>
+                <div class="grade"> 
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle id="circle-grade" cx="70" cy="70" r="70" style="stroke-dashoffset: calc(440 - (440 * <%= nota.nota %>) / 10)"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2><span><%= nota.nota %> </span>/ 10</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="grades-bar show-hide">
+              <h2 class="text" style="text-transform: uppercase;"><%= nota.nome %> </h2>
+              <div class="bar-grade">
+                <div class="gray-bar">
+                  <div class="green-bar" style="width: <%= nota.nota %>0%"></div>
+                </div>
+              </div>
+              <div class="number">
+                <h2><span><%= nota.nota %> </span>/ 10</h2>
+              </div>
+            </div>
+        <% } %>
+        
+    </section>    
+  </main> 
+</body>
+</html>

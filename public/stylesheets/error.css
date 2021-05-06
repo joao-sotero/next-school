@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    align-items: center;
+}
+
+.container-error {
+    width: 80rem; /* 1200px */
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+main .error-message {
+    width: 50%;
+    margin-left: 5rem;
+}
+
+main figure img {
+    margin-top: 9rem;
+    width: 40rem; /* 640px de 16 */
+    height: 25rem; /* 400px de 16 */
+}
+
+main .error-message h1 {
+    font-size: 3rem;
+    letter-spacing: 0.125rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+}
+
+main .error-message p {
+    font-size: 1.5rem;
+    letter-spacing: 0.125rem;
+    line-height: 2rem;
+}
+
+@media (max-width: 768px){
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main figure img {
+        margin-top: 0;
+        width: 40rem; /* 640px de 16 */
+        height: 25rem; /* 400px de 16 */
+    }
+
+    main .error-message {
+        width: 70%;
+        margin-left: -2rem;
+    }
+}   
+
+@media (max-width: 480px){
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main figure img {
+        margin-top: 0;
+        width: 40rem; 
+        height: 25rem; 
+    }
+
+    #yoda {
+        width: 30rem; 
+
+    }
+
+    main .error-message {
+        width: 70%;
+        margin-left: 2.5rem;
+    }
+}   

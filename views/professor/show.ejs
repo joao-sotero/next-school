@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT school | Professor</title>
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <link rel="stylesheet" href="/stylesheets/show.css">
+</head>
+<body>
+  <main>
+    <section class="container flex-center">
+      <a href="/" id="logout-icon"><img src="/images/logout.svg" alt="Logout image"></a>
+      <figure>
+        <img src="/images/usuarios/<%= professor.img_perfil %> " alt="Imagem do aluno">
+      </figure>
+      <div class="text-info">
+          <h1><%= professor.nome %> </h1>
+          <p>Professor</p>
+      </div>
+      <div class="modules-info">
+          <div class="modules">
+              <p>Módulo</p>
+              <span><%= professor.modulo_id %> </span>
+          </div>
+      </div>
+      <a href="/professor/listagem" class="button">ALUNOS</a>
+    </section>
+  </main> 
+</body>
+</html>

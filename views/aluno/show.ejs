@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT school | Aluno</title>
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <link rel="stylesheet" href="/stylesheets/show.css">
+</head>
+<body>
+  <main>
+    <section class="container flex-center">
+      <form action="/logout">
+        <button type="submit" id="logout-icon"><img src="/images/logout.svg" alt="Logout image"></button>
+      </form>
+      <figure>
+        <img src="/images/usuarios/<%= aluno.img_perfil %>" alt="Imagem do aluno">
+      </figure>
+      <div class="text-info">
+          <h1><%= aluno.nome_aluno %> </h1> 
+          <p>Aluno</p>
+      </div>
+      <div class="grades-info">
+          <div class="grades">
+              <p>Média</p>
+              <span><%= aluno.boletim[0].nota  %> </span>
+          </div>
+          <div class="modules">
+              <p>Módulo</p>
+              <span><%= aluno.modulo_id %> </span> 
+          </div>
+      </div>
+      <a href="/aluno/<%= aluno.id %>/boletim" class="button">NOTAS</a>
+    </section>
+  </main> 
+</body>
+</html>

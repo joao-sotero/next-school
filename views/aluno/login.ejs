@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT school | Login</title>
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <link rel="stylesheet" href="/stylesheets/home-login.css">
+</head>
+<body>
+  <main>
+    <section class="container">
+      <figure>
+        <img src="/images/login-aluno.svg" alt="Imagem da logo">
+      </figure>
+      <div class="login">
+        <form action="/logout">
+          <a href="/admin/selecionar" class="utton"><img src="/images/icons/Home.svg" alt="Home icon"></a>
+        </form>
+          <h1>Entrar</h1>
+          <form action="/aluno/entrar" method="POST">
+            <div class="field">
+                <div class="icon">
+                    <img src="/images/icons/profile.svg" alt="Icone de perfil">
+                </div>
+                <fieldset class="input">
+                  <label for="">CPF</label>
+                  <input type="text" name="cpf" placeholder="Digite seu CPF" maxlength="11">
+                </fieldset>
+            </div>
+            <button class="button" type="submit">Entrar</button>
+          </form>
+      </div> 
+    </section>
+  </main> 
+</body>
+</html>

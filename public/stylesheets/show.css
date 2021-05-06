@@ -1,0 +1,84 @@
+/*=== SHOW ALUNO ===*/
+
+main section figure {
+    width: 15.5rem; /* 248px */
+    height: 15.5rem; /* 248px */
+    text-align: center;
+    margin: 4.75rem 0 2rem 0; /* 76px 0 80px 0*/
+}
+
+main section figure img {
+    width: 12rem; /* 248px */
+    height: 12rem; /* 248px */
+    border-radius: 24px;
+}
+
+main section .text-info h1 {
+    font-size: 2.5rem; /* 48px */
+}
+
+main section .text-info p,
+main section .grades-info .grades p,
+main section .grades-info .modules p,
+main section .modules-info .modules p {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 500;
+    color: #A9A9A9;
+    text-align: center;
+}
+
+main section .grades-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem; /* 32px */
+    margin-bottom: 4rem;
+}
+
+main section .modules-info {
+    margin-top: 2rem; /* 16px */
+    margin-bottom: 4rem; /* 64px*/
+}
+
+main section .grades-info .grades,
+main section .grades-info .modules {
+    text-align: center;
+}
+
+main section .grades-info .grades span,
+main section .grades-info .modules span,
+main section .modules-info .modules span {
+    font-weight: 500;
+    font-size: 1.75rem; /* 28px */
+}
+
+main section a.button {
+    border-radius: 50px;
+}
+
+main section {
+    position: relative;
+}
+
+main section #logout-icon {
+    position: absolute;
+    right: 7rem;
+    top: 4.5rem;
+}
+
+@media (max-width: 768px){
+    body main section.container{
+        max-width: 768px;
+    }
+}
+
+@media (max-width: 480px) { 
+    main {
+        margin-top: 10rem;
+    }
+
+    main section #logout-icon {
+        position: absolute;
+        right: 2rem;
+        top: 5rem;
+    }
+}

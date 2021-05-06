@@ -1,0 +1,147 @@
+/*=== LOGIN ===*/
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section .login {
+    width: 23.75rem; /* 380px */
+}
+
+main section .login .header-login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main section .login .header-login a {
+    height: 3.5rem;
+    width: 4.735rem;
+    border: 0.125rem solid var(--main-color); /* 2px de 16 */
+    background-color: #FFF;
+    border-radius: 16px;
+    margin-left: 1.5rem; /*  16px */
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+main section .login h1 {
+    font-size: 1.75rem; /* 32px */
+    text-align: center;
+}
+
+main section .login form .field:nth-child(1) {
+    margin-top: 3.5rem;
+}
+
+main section .login form .field {
+    margin-top: 1rem;
+    display: flex;
+    background-color: #EFF0F6;
+    border-radius: 16px;
+    width: 23.75rem; /* 380px */
+}
+
+main section .login form .field div.icon {
+    padding: 1.375rem 1.5rem; /* 22px 24px */
+}
+
+main section .login form .field div.icon img {
+    width: 1.5rem; /* 24px */
+    height: 1.5rem; /* 24px */
+    align-self: center;
+}
+
+main section .login form fieldset div.icon .show-hide {
+    cursor: pointer;
+}
+
+main section .login form .field .input {
+    padding: 8px 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main section .login form .field .input label {
+    font-size: 0.875; /* 14px */
+    color: #6E7191;
+}
+
+main section .login form .field .input input {
+    background-color: #EFF0F6;
+    border: none;
+    font-size: 1rem; /* 16px */
+}
+
+main section .login form select {
+    margin: 1.5rem 0 1.5rem 0;
+    width: 100%;
+    padding: 1.25rem;
+    border: none;
+    background-color: #EFF0F6;
+    border-radius: 16px;
+    font-size: 1rem;
+}
+
+#appearance-select {   
+    -webkit-appearance: none;  /* Remove estilo padrão do Chrome */   
+    -moz-appearance: none; /* Remove estilo padrão do FireFox */   
+    appearance: none; /* Remove estilo padrão do FireFox*/   
+    background: url('/images/icons/Forward.svg') no-repeat #eeeeee;  /* Imagem de fundo (Seta) */   
+    background-position: 21.25rem; /* 340px */ 
+    padding: 1.5rem;
+    display: block;
+    /*Posição da imagem do background*/   
+}
+
+main section .login form button {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* PHOTOS UPLOAD */
+
+main section .login .input-file {
+    margin: 1rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+main section .login .input-file #photos-upload {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    width: 12.5rem; /* 200px de 16 */
+}
+
+main section .login .input-file #photos-upload p {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--main-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 0.1875rem solid var(--main-color); /* 3px */
+    width: 12.5rem; /* 200px de 16 */
+}
+
+main section .login .input-file #photo-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    cursor: pointer;
+}

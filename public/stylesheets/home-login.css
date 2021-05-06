@@ -1,0 +1,170 @@
+/*=== HOME ===*/
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section {
+    display: flex;
+    align-items: center;
+}
+
+main section .login {
+    width: 23.75rem; /* 380px */
+    margin-left: 8.5rem;
+}
+
+main section .login p {
+    margin-top: 2rem;
+}
+
+main section .login p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+main section .login .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+main section .login .buttons a {
+    border-radius: 50px;
+}
+
+main section .login .buttons a:nth-child(2) {
+    background-color: #FFF;
+    color: var(--main-color);
+    border: 0.125rem solid var(--main-color); /* 2px de 16 */
+}
+
+/*=== LOGIN ===*/
+
+main section .login h1 {
+    font-size: 2.375rem; /* 38px de 16 */
+    text-align: center;
+}
+
+main section .login form .field:nth-child(1) {
+    margin-top: 3.5rem; /* 56px de 16 */
+}
+
+main section .login form .field {
+    margin-top: 1rem;
+    display: flex;
+    background-color: #EFF0F6;
+    border-radius: 16px;
+    width: 23.75rem; /* 380px */
+}
+
+/* #eye-icon {
+    padding-right: 10rem;
+} */
+
+main section .login form .field div.icon {
+    padding: 1.375rem 1.5rem; 
+}
+
+main section .login form .field div.icon img {
+    width: 1.5rem; 
+    height: 1.5rem;
+    align-self: center;
+}
+
+main section .login form .field div.icon img:nth-child(2) {
+    width: 1.5rem; 
+    height: 1.5rem;
+    align-self: center;
+}
+
+main section .login form fieldset div.icon .show-hide {
+    cursor: pointer;
+}
+
+main section .login form .field .input {
+    padding: 0.5rem 0; /* 8px de 16 */
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main section .login form .field .input label {
+    font-size: 0.875rem; /* 14px de 16 */
+    color: #6E7191;
+}
+
+main section .login form .field .input input {
+    background-color: #EFF0F6;
+    border: none;
+    font-size: 1rem; /* 16px de 16 */
+}
+
+main section .login form button {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+main section .login .choose-listing {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 6rem;
+}
+
+main section .login .choose-listing p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+main section .login .choose-listing a.button {
+    font-size: 1rem;
+    height: 0;
+    width: auto;
+    padding: 1rem 1.5rem;
+    /* border: 0.125rem solid var(--main-color); */
+    color: var(--main-color);
+    background-color: #FFF;
+}
+
+@media (max-width: 1280px){
+    main section .login {
+        margin-left: 5rem;
+    }
+    
+    main section .login .buttons {
+        width: 24rem;
+        display: flex;
+        justify-content: space-between;
+    }
+} 
+
+@media (max-width: 768px){
+    main section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    main section figure{
+        margin-bottom: 8.75rem;
+    }
+    
+    main section div.login{
+        margin-left: 0px;
+    }
+}  
+
+@media (max-width: 480px) { 
+    main section figure {
+        margin-bottom: 0;
+    }
+    main section figure img {
+        width: 30.25rem;
+    }
+}
